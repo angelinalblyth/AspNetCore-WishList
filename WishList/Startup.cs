@@ -18,6 +18,8 @@ namespace WishList
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //This is the line that needs changed to a local database. Need to figure out how this is done, use mongodb? 
             services.AddDbContext<ApplicationDbContext>(options => options.UseInMemoryDatabase("WishList"));
         }
 
